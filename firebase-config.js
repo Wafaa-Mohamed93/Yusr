@@ -1,6 +1,6 @@
-// firebase-config.js
-
-// تأكدي أنك أضفت هذا الملف داخل index.html بعد Firebase CDN
+// Firebase CDN version
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getAuth } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCeAqs_CW5Irf5ue_WuV9_dzuCQ7HFMOEQ",
@@ -12,5 +12,5 @@ const firebaseConfig = {
   measurementId: "G-B1JVQQ5VGK"
 };
 
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app);
