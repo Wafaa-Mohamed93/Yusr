@@ -1,11 +1,21 @@
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSy...",
-  authDomain: "yusr-game.firebaseapp.com",
-  databaseURL: "https://yusr-game.firebaseio.com",
-  projectId: "yusr-game",
-  storageBucket: "yusr-game.appspot.com",
-  messagingSenderId: "1234567890",
-  appId: "1:1234567890:web:abcdefgh"
+  apiKey: "AIzaSyCeAqs_CW5Irf5ue_WuV9_dzuCQ7HFMOEQ",
+  authDomain: "yusr-a98fd.firebaseapp.com",
+  projectId: "yusr-a98fd",
+  storageBucket: "yusr-a98fd.firebasestorage.app",
+  messagingSenderId: "946985243840",
+  appId: "1:946985243840:web:45b1b5567e4cf09516c925",
+  measurementId: "G-B1JVQQ5VGK"
 };
-firebase.initializeApp(firebaseConfig);
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
