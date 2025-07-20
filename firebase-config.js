@@ -1,3 +1,4 @@
+// firebase-config.js
 const firebaseConfig = {
   apiKey: "AIzaSyCeAqs_CW5Irf5ue_WuV9_dzuCQ7HFMOEQ",
   authDomain: "yusr-a98fd.firebaseapp.com",
@@ -8,6 +9,6 @@ const firebaseConfig = {
   measurementId: "G-B1JVQQ5VGK"
 };
 
-// Initialize Firebase
+// تهيئة Firebase
 firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
