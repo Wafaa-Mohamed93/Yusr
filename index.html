@@ -2,23 +2,22 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>تسجيل الدخول - يُسر</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>لعبة يُسر</title>
   <link rel="stylesheet" href="style.css">
+  <script defer src="firebase-config.js"></script>
+  <script defer src="questions.js"></script>
+  <script defer src="main.js"></script>
 </head>
 <body>
   <div class="container">
-    <h1>مرحبًا بك في يُسر</h1>
-    <form id="login-form">
-      <input type="email" id="email" placeholder="البريد الإلكتروني" required>
-      <input type="password" id="password" placeholder="كلمة المرور" required>
-      <button type="submit">دخول / تسجيل</button>
-      <p id="message"></p>
-    </form>
+    <h1>لعبة يُسر</h1>
+    <div id="question-container">
+      <p id="question-text">جارٍ تحميل السؤال...</p>
+      <div id="choices"></div>
+    </div>
+    <div id="result"></div>
+    <button id="next-btn">التالي</button>
   </div>
-  <!-- استدعاء Firebase (App + Auth) -->
-  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
-  <script src="firebase-config.js"></script>
-  <script src="auth.js"></script>
 </body>
 </html>
