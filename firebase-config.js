@@ -1,5 +1,6 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+// firebase-config.js
+
+// تأكدي أنك أضفت هذا الملف داخل index.html بعد Firebase CDN
 
 const firebaseConfig = {
   apiKey: "AIzaSyCeAqs_CW5Irf5ue_WuV9_dzuCQ7HFMOEQ",
@@ -11,7 +12,5 @@ const firebaseConfig = {
   measurementId: "G-B1JVQQ5VGK"
 };
 
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-
-export { auth, createUserWithEmailAndPassword, signInWithEmailAndPassword };
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
