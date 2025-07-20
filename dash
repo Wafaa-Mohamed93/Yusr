@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>لوحة التحكم - يُسر</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>نقاطك</h2>
+    <p>رصيدك: <span id="points">0</span> نقطة</p>
+    <p>يمكنك تحويل كل 100 نقطة إلى 1 جنيه</p>
+  </div>
+</body>
+</html>
