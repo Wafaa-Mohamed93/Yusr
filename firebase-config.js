@@ -1,4 +1,6 @@
-// firebase-config.js
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
 const firebaseConfig = {
   apiKey: "AIzaSyCeAqs_CW5Irf5ue_WuV9_dzuCQ7HFMOEQ",
   authDomain: "yusr-a98fd.firebaseapp.com",
@@ -9,6 +11,7 @@ const firebaseConfig = {
   measurementId: "G-B1JVQQ5VGK"
 };
 
-// تهيئة Firebase
-firebase.initializeApp(firebaseConfig);
-const auth = firebase.auth();
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+export { auth, createUserWithEmailAndPassword, signInWithEmailAndPassword };
