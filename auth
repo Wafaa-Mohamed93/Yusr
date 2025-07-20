@@ -1,22 +1,16 @@
-// auth.js
+import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+import { auth } from "./firebase-config.js";
 
-const loginForm = document.getElementById('login-form');
-const emailInput = document.getElementById('email');
-const passwordInput = document.getElementById('password');
-const errorBox = document.getElementById('error-msg');
+window.login = function () {
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+  const errorEl = document.getElementById("login-error");
 
-loginForm.addEventListener('submit', function (e) {
-  e.preventDefault();
-
-  const email = emailInput.value;
-  const password = passwordInput.value;
-
-  firebase.auth().signInWithEmailAndPassword(email, password)
-    .then((userCredential) => {
-      window.location.href = "home.html"; // صفحة اللعبة بعد الدخول
+  signInWithEmailAndPassword(auth, email, password)
+    .then(() => {
+      window.location.href = "index.html";
     })
     .catch((error) => {
-      console.error(error.message);
-      errorBox.textContent = "❌ البريد الإلكتروني أو كلمة المرور غير صحيحة.";
+      errorEl.textContent = "فشل تسجيل الدخول: " + error.message;
     });
-});
+}
